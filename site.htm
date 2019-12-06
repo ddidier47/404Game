@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>404Game</title>
+		<style>
+		body {
+			display:grid;
+			place-content: center;
+			height: 100vh;
+			grid-template-areas: 
+			
+			"score"
+			"game";
+		}
+
+		canvas {
+			grid-area: game;
+		}
+		
+		#score {
+			grid-area: score;
+			justify-self: center;
+		}
+
+		#gameover {
+			grid-area: game;
+			place-self: center;
+			font-size: xx-large;
+		}
+		#pause {
+			grid-area: game;
+			place-self: center;
+			font-size: xx-large;
+		}
+		
+		</style>
+	</head>
+	<body>
+		
+		<div id="score"></div>
+		<canvas id="game" style="border: 2px solid black">
+				Navigateur non support�
+			</canvas>
+			<div id="state" style="margin-left: 150px;">
+					
+			</div>
+				<div id="gameover"></div>
+				<div id="pause"></div>
+				<div>Move : directionnal arrows <br> Restart : Space <br> Pause : Echap </div> 
+		
+		</div>
+		
+		<script type="text/javascript" src="init.js"></script>
+		<script type="text/javascript" src="class/hero.js"></script>
+		<script type="text/javascript" src="class/plateform.js"></script>
+		<script type="text/javascript" src="game.js"></script>
+	</body>
+</html>
